@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Settings, User, Menu, Palette, Info, Heart } from 'lucide-react';
+import { Settings, User, Menu, Info, Heart } from 'lucide-react';
 import SettingsDialog from './SettingsDialog';
 
 const ProfileMenu = () => {
@@ -49,10 +49,6 @@ const ProfileMenu = () => {
           <DropdownMenuItem onClick={() => setSettingsOpen(true)} className="cursor-pointer">
             <Settings className="mr-2 h-4 w-4" />
             <span>Settings</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setSettingsOpen(true)} className="cursor-pointer">
-            <Palette className="mr-2 h-4 w-4" />
-            <span>Theme</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
