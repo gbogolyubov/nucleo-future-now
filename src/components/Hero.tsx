@@ -48,7 +48,7 @@ const Hero = () => {
                   <Globe className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">20%</div>
+              <div className="text-3xl font-bold text-white-900 mb-1 bg-transparent">20%</div>
               <div className="text-gray-600">of US electricity from nuclear</div>
             </div>
             <div className="text-center">
