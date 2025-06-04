@@ -15,6 +15,17 @@ const Navigation = () => {
     { name: 'Partners', href: '#partners' }
   ];
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,14 +44,14 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </button>
             ))}
           </div>
 
@@ -67,14 +78,13 @@ const Navigation = () => {
           <div className="md:hidden py-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
               <Button className="bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold mt-4 rounded-full">
                 Join the Movement

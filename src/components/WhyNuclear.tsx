@@ -2,6 +2,14 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Leaf, Zap, Recycle, Rocket, Shield, Clock } from 'lucide-react';
 
 const WhyNuclear = () => {
@@ -78,34 +86,67 @@ const WhyNuclear = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white overflow-hidden">
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`p-3 rounded-full ${getColorClasses(benefit.color).split(' ')[2]}`}>
-                    <benefit.icon className={`w-6 h-6 ${getColorClasses(benefit.color).split(' ')[1]}`} />
-                  </div>
-                  <Badge variant="secondary" className="text-xs">
-                    FACT
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  {benefit.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {benefit.description}
-                </p>
-                <div className={`p-3 rounded-lg ${getColorClasses(benefit.color).split(' ')[2]} border-l-4 border-${benefit.color}-500`}>
-                  <p className={`text-sm font-semibold ${getColorClasses(benefit.color).split(' ')[1]}`}>
-                    💡 {benefit.fact}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Carousel */}
+        <div className="relative max-w-4xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {benefits.map((benefit, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white overflow-hidden h-full">
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className={`p-3 rounded-full ${getColorClasses(benefit.color).split(' ')[2]}`}>
+                          <benefit.icon className={`w-6 h-6 ${getColorClasses(benefit.color).split(' ')[1]}`} />
+                        </div>
+                        <Badge variant="secondary" className="text-xs">
+                          FACT
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        {benefit.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0 flex flex-col h-full">
+                      <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
+                        {benefit.description}
+                      </p>
+                      <div className={`p-3 rounded-lg ${getColorClasses(benefit.color).split(' ')[2]} border-l-4 border-${benefit.color}-500 mb-4`}>
+                        <p className={`text-sm font-semibold ${getColorClasses(benefit.color).split(' ')[1]}`}>
+                          💡 {benefit.fact}
+                        </p>
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        className="w-full mt-auto hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-colors"
+                      >
+                        Learn More
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+          
+          {/* Mobile navigation dots */}
+          <div className="flex justify-center mt-6 md:hidden">
+            <div className="flex space-x-2">
+              {benefits.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}
