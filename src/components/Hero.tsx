@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Zap, Globe, Users } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+  return <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-zinc-800">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 bg-zinc-800">
           {/* Hero Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8 animate-fade-in">
             <Zap className="w-4 h-4 mr-2" />
@@ -16,13 +13,13 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-purple-800">
               Rebranding
             </span>
             <br />
-            <span className="text-gray-900">Nuclear Energy</span>
+            <span className="text-gray-50">Nuclear Energy</span>
             <br />
-            <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               for Gen Z
             </span>
           </h1>
@@ -80,8 +77,6 @@ const Hero = () => {
           <ArrowDown className="w-6 h-6 text-gray-400" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
