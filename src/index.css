@@ -89,6 +89,44 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .tokamak {
+    --background: 240 10% 3.9%;
+    --foreground: 320 90% 85%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 320 90% 85%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 320 90% 85%;
+
+    --primary: 315 100% 70%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 320 90% 85%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 320 40% 65%;
+
+    --accent: 315 100% 47%;
+    --accent-foreground: 320 90% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 315 100% 70%;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 320 90% 85%;
+    --sidebar-primary: 315 100% 70%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 320 90% 85%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 315 100% 70%;
+  }
 }
 
 @layer base {
