@@ -36,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -92,39 +85,39 @@
 
   .tokamak {
     --background: 240 10% 3.9%;
-    --foreground: 320 90% 85%;
+    --foreground: 300 100% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 320 90% 85%;
+    --card: 240 8% 8%;
+    --card-foreground: 300 100% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 320 90% 85%;
+    --popover: 240 8% 8%;
+    --popover-foreground: 300 100% 95%;
 
     --primary: 315 100% 70%;
     --primary-foreground: 240 10% 3.9%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 320 90% 85%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 300 100% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 320 40% 65%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 300 50% 75%;
 
-    --accent: 315 100% 47%;
-    --accent-foreground: 320 90% 85%;
+    --accent: 315 100% 60%;
+    --accent-foreground: 300 100% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 240 6% 12%;
+    --input: 240 6% 12%;
     --ring: 315 100% 70%;
     --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 320 90% 85%;
+    --sidebar-foreground: 300 100% 95%;
     --sidebar-primary: 315 100% 70%;
     --sidebar-primary-foreground: 240 10% 3.9%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 320 90% 85%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-accent: 240 6% 12%;
+    --sidebar-accent-foreground: 300 100% 95%;
+    --sidebar-border: 240 6% 12%;
     --sidebar-ring: 315 100% 70%;
   }
 }
@@ -139,6 +132,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-200;
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  .theme-transition {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 }

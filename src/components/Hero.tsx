@@ -5,11 +5,11 @@ import { ArrowDown, Zap, Globe, Users } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+    <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-background theme-transition">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           {/* Hero Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 tokamak:bg-pink-900/30 text-blue-800 dark:text-blue-200 tokamak:text-pink-200 rounded-full text-sm font-medium mb-8 animate-fade-in">
+          <div className="inline-flex items-center px-4 py-2 bg-muted text-foreground rounded-full text-sm font-medium mb-8 animate-fade-in theme-transition">
             <Zap className="w-4 h-4 mr-2" />
             Student-Led Nuclear Advocacy
           </div>
@@ -20,7 +20,7 @@ const Hero = () => {
               Rebranding
             </span>
             <br />
-            <span className="text-gray-900 dark:text-white tokamak:text-purple-100">Nuclear Energy</span>
+            <span className="text-foreground">Nuclear Energy</span>
             <br />
             <span className="bg-gradient-to-r from-green-600 to-blue-600 tokamak:from-purple-400 tokamak:to-pink-400 bg-clip-text text-transparent">
               for Gen Z
@@ -28,8 +28,8 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 tokamak:text-purple-200 mb-12 max-w-3xl mx-auto animate-fade-in">
-            We're a student-led movement promoting nuclear power as the <strong>clean energy solution</strong> our planet needs. 
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in">
+            We're a student-led movement promoting nuclear power as the <strong className="text-foreground">clean energy solution</strong> our planet needs. 
             Join us in advocating for a carbon-free future.
           </p>
 
@@ -38,7 +38,7 @@ const Hero = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-500 tokamak:to-purple-500 hover:from-blue-700 hover:to-green-700 tokamak:hover:from-pink-600 tokamak:hover:to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200">
               Join the Movement
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-blue-600 tokamak:border-pink-400 text-blue-600 tokamak:text-pink-400 hover:bg-blue-50 tokamak:hover:bg-pink-950/20 font-bold px-8 py-4 rounded-full transition-all duration-200">
+            <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-muted font-bold px-8 py-4 rounded-full transition-all duration-200 theme-transition">
               Learn the Truth About Nuclear
             </Button>
           </div>
@@ -47,37 +47,37 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <div className="p-3 bg-blue-100 dark:bg-blue-900/30 tokamak:bg-pink-900/30 rounded-full">
-                  <Globe className="w-6 h-6 text-blue-600 tokamak:text-pink-400" />
+                <div className="p-3 bg-muted rounded-full">
+                  <Globe className="w-6 h-6 text-primary" />
                 </div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white tokamak:text-purple-100 mb-1">20%</div>
-              <div className="text-gray-600 dark:text-gray-400 tokamak:text-purple-300">of US electricity from nuclear</div>
+              <div className="text-3xl font-bold text-foreground mb-1">20%</div>
+              <div className="text-muted-foreground">of US electricity from nuclear</div>
             </div>
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <div className="p-3 bg-green-100 dark:bg-green-900/30 tokamak:bg-purple-900/30 rounded-full">
-                  <Zap className="w-6 h-6 text-green-600 tokamak:text-purple-400" />
+                <div className="p-3 bg-muted rounded-full">
+                  <Zap className="w-6 h-6 text-primary" />
                 </div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white tokamak:text-purple-100 mb-1">24/7</div>
-              <div className="text-gray-600 dark:text-gray-400 tokamak:text-purple-300">Clean, reliable power</div>
+              <div className="text-3xl font-bold text-foreground mb-1">24/7</div>
+              <div className="text-muted-foreground">Clean, reliable power</div>
             </div>
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <div className="p-3 bg-purple-100 dark:bg-purple-900/30 tokamak:bg-pink-900/30 rounded-full">
-                  <Users className="w-6 h-6 text-purple-600 tokamak:text-pink-400" />
+                <div className="p-3 bg-muted rounded-full">
+                  <Users className="w-6 h-6 text-primary" />
                 </div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white tokamak:text-purple-100 mb-1">1000+</div>
-              <div className="text-gray-600 dark:text-gray-400 tokamak:text-purple-300">Young advocates worldwide</div>
+              <div className="text-3xl font-bold text-foreground mb-1">1000+</div>
+              <div className="text-muted-foreground">Young advocates worldwide</div>
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
         <div className="flex justify-center animate-bounce">
-          <ArrowDown className="w-6 h-6 text-gray-400 tokamak:text-purple-400" />
+          <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </div>
       </div>
     </section>
