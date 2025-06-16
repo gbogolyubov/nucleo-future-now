@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Atom, Palette, Check } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 import UserProfile from './UserProfile';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,6 +71,7 @@ const Navigation = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <UserProfile />
             <Button className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-500 tokamak:to-purple-500 hover:from-blue-700 hover:to-green-700 tokamak:hover:from-pink-600 tokamak:hover:to-purple-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200">
               Join the Movement
@@ -78,6 +80,7 @@ const Navigation = () => {
 
           {/* Mobile hamburger menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <UserProfile />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
