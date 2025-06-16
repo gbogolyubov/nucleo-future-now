@@ -50,7 +50,7 @@ const Navigation = () => {
               <Atom className="w-8 h-8 text-primary" />
               <div className="absolute inset-0 bg-primary/20 rounded-full animate-pulse"></div>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-400 tokamak:to-purple-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-primary tokamak:to-accent bg-clip-text text-transparent">
               Nucleo
             </span>
           </div>
@@ -73,7 +73,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <UserProfile />
-            <Button className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-500 tokamak:to-purple-500 hover:from-blue-700 hover:to-green-700 tokamak:hover:from-pink-600 tokamak:hover:to-purple-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200">
+            <Button className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-primary tokamak:to-accent hover:from-blue-700 hover:to-green-700 tokamak:hover:from-primary/90 tokamak:hover:to-accent/90 text-white font-semibold px-6 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200">
               Join the Movement
             </Button>
           </div>
@@ -127,7 +127,7 @@ const Navigation = () => {
                 </div>
               </div>
 
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-500 tokamak:to-purple-500 text-white font-semibold mt-4 rounded-full">
+              <Button className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-primary tokamak:to-accent text-white font-semibold mt-4 rounded-full">
                 Join the Movement
               </Button>
             </div>

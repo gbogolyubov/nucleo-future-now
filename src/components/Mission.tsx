@@ -32,7 +32,7 @@ const Mission = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-pink-400 tokamak:to-purple-400 bg-clip-text text-transparent">Nucleo</span>
+            About <span className="bg-gradient-to-r from-blue-600 to-green-600 tokamak:from-primary tokamak:to-accent bg-clip-text text-transparent">Nucleo</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
             We're not your typical nuclear advocates. We're students, activists, and young professionals who believe 
